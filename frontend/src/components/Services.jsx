@@ -21,12 +21,14 @@ function Services() {
                             </Card.Title>
 
                             <Card.Text>{service.description}</Card.Text>
-                            
+
                             <Card.Text a='div'>
                                 <div className='my-3'>
                                     <Rating value={service.rating} text={`${service.rating} out of 5`} />
                                 </div>
                             </Card.Text>
+
+                            <Button as={Link} to={`/services/${service.service_name}`} variant="outline-dark" className="align-self-start rounded-0 px-4">View Service</Button>
                         </Card.Body>
                     </Card>
                 </Col>

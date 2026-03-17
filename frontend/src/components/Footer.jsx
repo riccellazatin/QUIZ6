@@ -3,7 +3,9 @@ import React from 'react'
 function Footer() {
   return (
     <>
-    <h1>Footer</h1>
+    <center>
+      <p style={{margin: 40}}>Security System & Low-Voltage Services</p>
+    </center>
     </>
   )
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './PaymentForm.css'
 
 const PaymentForm = ({ onPaymentSuccess }) => {
   const [formData, setFormData] = useState({
@@ -50,7 +49,7 @@ const PaymentForm = ({ onPaymentSuccess }) => {
 
   return (
     <div className="payment-form-container">
-      <h2>Make a Donation</h2>
+      <h2>Booking Payment</h2>
       {error && <div className="error-message">{JSON.stringify(error)}</div>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">

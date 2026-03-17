@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Service.css'
 
 const PaymentSuccessScreen = () => {
   const navigate = useNavigate();

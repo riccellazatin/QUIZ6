@@ -25,5 +25,5 @@ def get_services (request, pk):
 def get_service(request, pk):
     service = get_object_or_404(Service, _id=pk)
 
-    serializer = ServiceSerializer(product, many=False)
+    serializer = ServiceSerializer(service, many=False)
     return Response(serializer.data)

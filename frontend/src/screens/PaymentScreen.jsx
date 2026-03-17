@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PaymentForm from '../components/PaymentForm';
 import PayPalCheckout from '../components/PayPalCheckout';
+import './Service.css'
+import {Row, Col, Button} from 'react-bootstrap'
 
 const PaymentScreen = () => {
   const [paymentData, setPaymentData] = useState(null);
@@ -20,18 +22,22 @@ const PaymentScreen = () => {
         <p>Support our services in SeksYu</p>
       </header>
 
-      <main className="main-content">
-        {!paymentData ? (
-          <DonationForm onPaymentSuccess={handlePaymentSuccess} />
-        ) : (
-          <div>
+      <Row className="g-4">
+        <Col lg={paymentData ? 5 : 6}>
+          <PaymentForm onPaymentSuccess={handlePaymentSuccess} />
+        </Col>
+
+        {paymentData && (
+          <Col lg={7}>
             <PayPalCheckout paymentData={paymentData} />
-            <button onClick={handleReset} className="back-btn">
-              Back to Form
-            </button>
-          </div>
+            <div className="mt-3">
+              <Button onClick={handleReset} variant="outline-dark" className="rounded-0 px-4">
+                Back to Form
+              </Button>
+            </div>
+          </Col>
         )}
-      </main>
+      </Row>
 
       <footer className="footer">
         <p>&copy; 2026 Payment Platform. Powered by PayPal.</p>
