@@ -1,22 +1,25 @@
 export const services = [
     {
         '_id': '1',
-        'name': 'CCTV Installation',
+        'service_name': 'CCTV Installation',
         'description': 'Lorem Ipsum 1',
-        'img': './logo192.png',
+        'image': './images/cctv.jpg',
+        'rating': '2.89',
     },
 
     {
         '_id': '2',
-        'name': 'Keycard Reader Installation',
+        'service_name': 'Keycard Reader Installation',
         'description': 'Lorem Ipsum 2',
-        'img': './logo192.png',
+        'image': './images/keycard.jpg',
+        'rating': '3.7',
     },
 
     {
         '_id': '3',
-        'name': 'Alarm System Installation',
+        'service_name': 'Alarm System Installation',
         'description': 'Lorem Ipsum 3',
-        'img': './logo192.png',
+        'image': './images/alarm.png',
+        'rating': '5.00',
     },
 ]
